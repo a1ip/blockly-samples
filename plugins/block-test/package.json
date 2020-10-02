@@ -1,16 +1,13 @@
 {
-  "name": "@blockly/plugin-strict-connection-checker",
+  "name": "@blockly/block-test",
   "version": "1.0.0",
-  "description": "A Blockly plugin that makes connection checks strict.",
+  "description": "A group of Blockly test blocks.",
   "scripts": {
     "build": "blockly-scripts build",
     "clean": "blockly-scripts clean",
     "lint": "blockly-scripts lint",
-    "predeploy": "blockly-scripts predeploy",
-    "postinstall": "blockly-scripts postinstall",
     "prepublishOnly": "npm run clean && npm run build",
-    "start": "blockly-scripts start",
-    "test": "blockly-scripts test"
+    "start": "blockly-scripts start"
   },
   "main": "./dist/index.js",
   "module": "./src/index.js",
@@ -19,17 +16,17 @@
   "keywords": [
     "blockly",
     "blockly-plugin",
-    "strict-connection-checker",
-    "connection-checker"
+    "blockly-block",
+    "test"
   ],
-  "homepage": "https://github.com/google/blockly-samples/tree/master/plugins/strict-type-checker#readme",
+  "homepage": "https://github.com/google/blockly-samples/tree/master/plugins/block-test#readme",
   "bugs": {
     "url": "https://github.com/google/blockly-samples/issues"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/google/blockly-samples.git",
-    "directory": "plugins/strict-connection-checker"
+    "directory": "plugins/block-test"
   },
   "license": "Apache 2.0",
   "directories": {
@@ -43,13 +40,15 @@
   "devDependencies": {
     "@blockly/dev-scripts": "^1.2.0",
     "@blockly/dev-tools": "^2.0.2",
-    "blockly": "^3.20200924.1",
-    "chai": "^4.2.0"
+    "blockly": "^3.20200924.1"
   },
   "peerDependencies": {
-    "blockly": ">=3.20200924.1"
+    "blockly": ">=2"
   },
-  "publishConfig": {},
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://wombat-dressing-room.appspot.com"
+  },
   "eslintConfig": {
     "extends": "@blockly/eslint-config"
   },
@@ -57,6 +56,8 @@
     "node": ">=8.17.0"
   },
   "browserslist": [
-    "defaults"
+    "defaults",
+    "IE 11",
+    "IE_Mob 11"
   ]
 }
